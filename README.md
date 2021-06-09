@@ -1,14 +1,29 @@
 # flutter_web_widget
 
-A new Flutter package project.
+FlutterWebWidget widget for Flutter written in 100% Dart. Supports Android, iOS, Web.
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Setting up 
+1.Setup 
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+In pubspec.yaml:
+
+dependencies:
+  flutter_web_widget: ^0.0.1
+2.Display web browser 
+
+import 'package:flutter/material.dart';
+import 'package:web_browser/web_browser.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      body: SafeArea(
+        child: FlutterWebBrowser(
+          initialUrl: 'https://flutter.dev/',
+        ),
+      ),
+    ),
+  ));
+}
